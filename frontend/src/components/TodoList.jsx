@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { GrAdd } from "react-icons/gr";
 import { MdDelete } from "react-icons/md";
-import { FcTodoList } from "react-icons/fc";
 import { BiEditAlt } from "react-icons/bi";
 
 const getLocalStorageData = () => {
@@ -60,14 +59,8 @@ const ToDoList = () => {
   });
   return (
     <>
-      <div className="border-[20px] border-blue-800 overflow-scroll py-3 w-[100%] h-screen flex flex-col justify-start items-center ">
+      <div className="overflow-y-scroll pb-3 w-[100%] h-screen flex flex-col justify-start items-center ">
         <div className="w-3/4 md:w-1/2 flex flex-col gap-4 mt-6 pt-8">
-          <div className="flex flex-col justify-center items-center">
-            <FcTodoList className="text-[5rem]" />
-            <h1 className="pt-2 text-3xl font-bold tracking-wider rounded-lg text-center text-blue-900 ">
-              ToDo-List
-            </h1>
-          </div>
           <div className="flex border-b-2 border-blue-600 justify-center w-full bg-blue-300 h-14 rounded-md  ">
             <input
               className="border-b-2 placeholder:text-gray-800 placeholder:italic bg-blue-300 border-blue-600 pl-2 mb-4 border-0 focus:outline-none rounded-md text-lg w-full h-14"
@@ -96,7 +89,7 @@ const ToDoList = () => {
               <>
                 <div className="flex flex-col gap-2">
                   <h3
-                    className="bg-blue-300 hover:bg-blue-500 break-all text-xl min-h-12 h-auto flex items-center justify-between px-2 rounded-lg w-full"
+                    className="bg-blue-300 hover:bg-blue-500 break-all text-xl min-h-12 flex items-center justify-between px-2 rounded-lg w-full h-12"
                     key={currElement.id}
                   >
                     {currElement.name}
