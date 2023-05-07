@@ -12,7 +12,7 @@ app.use(cookieParser());
 config({
   path: "./database/config.env",
 });
-app.use(errorMiddleware);
+
 app.use(express.json());
 app.use(
   cors({
@@ -23,3 +23,4 @@ app.use(
 );
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/task", taskRouter);
+app.use(errorMiddleware);

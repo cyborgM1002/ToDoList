@@ -7,7 +7,7 @@ export const login = async (req, res, next) => {
   try {
     const { email, password } = req.body;
     const user = await userModel.findOne({ email }).select("+password");
-    if (!user) return next(new ErrorHandler("Invalid email", 400));
+    if (!user) return  next(new ErrorHandler("Invalid Email", 400));
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) return next(new ErrorHandler("Invalid Password", 400));
     sendCookie(user, res, `Welcome back, ${user.name}`, 200);
@@ -26,7 +26,7 @@ export const logout = (req, res) => {
     })
     .json({
       success: true,
-      message: "logged out successfully",
+      message: "Logged Out Successfully",
     });
 };
 
