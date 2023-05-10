@@ -10,7 +10,7 @@ export const app = express();
 
 app.use(cookieParser());
 config({
-	path: "./config.env",
+	path: "./database/config.env",
 });
 
 app.use(express.json());
