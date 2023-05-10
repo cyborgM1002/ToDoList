@@ -6,7 +6,7 @@ export const Profile = () => {
 	const { loading, user } = useContext(Context);
 	return (
 		<>
-			<div className="bg-gray-50 py-[100px] md:py-0 h-screen dark:bg-gray-900">
+			<div className="bg-gray-50 py-[100px] md:py-0 min-h-screen dark:bg-gray-900">
 				{loading ? (
 					<LinearProgress />
 				) : (
