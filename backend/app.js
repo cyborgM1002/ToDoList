@@ -10,16 +10,16 @@ export const app = express();
 
 app.use(cookieParser());
 config({
-  path: "./database/config.env",
+	path: "./config.env",
 });
 
 app.use(express.json());
 app.use(
-  cors({
-    origin: [process.env.FRONTEND_URI],
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
-  })
+	cors({
+		origin: [process.env.FRONTEND_URI],
+		methods: ["GET", "POST", "PUT", "DELETE"],
+		credentials: true,
+	})
 );
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/task", taskRouter);
