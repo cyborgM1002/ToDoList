@@ -39,7 +39,7 @@ function App() {
 					<Route path="/" element={<Home />} />
 					<Route path="/login" element={<Login />} />
 					<Route path="/profile" element={<Profile />} />
-					<Route path="/task" element={<ToDoList />} />
+					{/* <Route path="/task" element={<ToDoList />} /> */}
 					<Route path="/register" element={<Register />} />
 				</Routes>
 				<Toaster />
