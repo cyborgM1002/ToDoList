@@ -28,7 +28,7 @@ const TaskItems = ({
 							onChange={() => updateHandler(id)}
 							checked={isCompleted}
 						/>
-						<MdEdit className="sm:text-2xl text-xl text-white" />
+						{/* <MdEdit className="sm:text-2xl text-xl text-white" /> */}
 						<button
 							className=" dark:bg-gray-800 text-xs sm:text-sm md:text-[15px] sm:px-3 px-2 py-1 bg-gray-800 rounded-xl hover:dark:bg-red-800 shadow dark:border text-white/[0.9] "
 							onClick={() => deleteHandler(id)}
